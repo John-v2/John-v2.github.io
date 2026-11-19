@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | John Esin-Kenneth</title>
+  <meta name="description" content="Projects by John Esin-Kenneth: a Chamber of Finance team web app, HeimdallOS, an ASP.NET Core MVC music manager, a .NET MAUI employee app, and Mimir." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='26' fill='%236c8cff'/><ellipse cx='50' cy='50' rx='46' ry='12' fill='none' stroke='white' stroke-width='5' transform='rotate(-20 50 50)'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="nebula"></div>
+
+  <nav>
+    <a href="index.html" class="logo">JOHN<span>.</span></a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-head">
+      <h1>PROJECTS</h1>
+      <p>THINGS I'VE BUILT</p>
+    </section>
+
+    <section id="projects" class="reveal show" style="padding-top: 30px;">
+      <div class="card featured">
+        <span class="badge">FEATURED · TEAM PROJECT</span>
+        <h3>Chamber of Finance web app</h3>
+        <p>A web app built with a team of developers for a real client, the Chamber of Finance.</p>
+        <ul>
+          <li>Coordinated the team through Git branches, code reviews, and merge-conflict resolution</li>
+          <li>Built JSON-based save, edit, and draft functionality so no work is lost</li>
+          <li>Ran iterative user testing that cut submission errors by 35%</li>
+        </ul>
+        <div class="tags"><span>Team project</span><span>Git</span><span>JSON</span><span>UX testing</span></div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>HeimdallOS</h3>
+          <p>A full-stack personal command-center desktop app.</p>
+          <div class="tags"><span>React</span><span>Vite</span><span>Electron</span><span>ASP.NET Core</span><span>EF Core</span><span>SQLite</span></div>
+        </div>
+        <div class="card">
+          <h3>Music manager</h3>
+          <p>An MVC app that links artists, albums, and songs. Server-side validation and confirmations cut accidental deletions by 90%.</p>
+          <div class="tags"><span>ASP.NET Core MVC</span><span>C#</span><span>Entity Framework</span><span>SQL</span></div>
+        </div>
+        <div class="card">
+          <h3>Employee management app</h3>
+          <p>A multiplatform app for Windows, Android, and iOS from one codebase, with search, paging, and filtering.</p>
+          <div class="tags"><span>.NET MAUI</span><span>MVVM</span><span>XAML</span><span>SQLite</span></div>
+        </div>
+        <div class="card">
+          <h3>Mimir</h3>
+          <p>A personal trading-assistant app with market tracking, trade journaling, and net-worth tracking.</p>
+          <div class="tags"><span>React</span><span>Python</span><span>SQLite</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta reveal">
+      <p>Want to work together?</p>
+      <a href="index.html#contact" class="btn">Get in touch</a>
+    </section>
+  </main>
+
+  <footer>© <span id="yr"></span> John Esin-Kenneth · Built with GitHub Pages</footer>
+  <script src="main.js"></script>
+</body>
+</html>
