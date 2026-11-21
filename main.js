@@ -8,7 +8,7 @@ let stars = [], shooters = [];
 
 function resize() {
   c.width = innerWidth; c.height = innerHeight;
-  const n = Math.floor((c.width * c.height) / 5000);
+  const n = Math.min(400, Math.floor((c.width * c.height) / 5000));
   stars = Array.from({ length: n }, () => ({
     x: Math.random() * c.width,
     y: Math.random() * c.height,
@@ -40,7 +40,11 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-addEventListener('resize', resize);
+let lastW = innerWidth;
+addEventListener('resize', () => {
+  if (innerWidth !== lastW) { lastW = innerWidth; resize(); }
+  else { c.height = innerHeight; }
+});
 resize(); draw();
 
 const io = new IntersectionObserver(entries => {
