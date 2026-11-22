@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
-  <link rel="stylesheet" href="style.css?v=202611212018" />
+  <link rel="stylesheet" href="style.css?v=202611212042" />
 </head>
 <body>
   <canvas id="stars"></canvas>
@@ -33,7 +33,7 @@
       <div class="planet" aria-hidden="true"></div>
       <h1>JOHN ESIN-KENNETH</h1>
       <p class="tagline">SOFTWARE DEVELOPER</p>
-      <a href="projects.html" class="btn">View my projects</a>
+      <div class="hero-btns"><a href="projects.html" class="btn">View my projects</a><a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost"><i class="ti ti-download"></i> Resume</a></div>
     </section>
 
     <section id="about" class="reveal">
@@ -50,10 +50,17 @@
 
     <section id="skills" class="reveal">
       <h2>SKILLS</h2>
-      <div class="skills">
-        <span>C#</span><span>ASP.NET Core</span><span>ASP.NET MVC</span><span>.NET MAUI</span><span>Entity Framework</span>
-        <span>SQL</span><span>SQLite</span><span>React</span><span>Vite</span><span>Electron</span>
-        <span>JavaScript</span><span>HTML5</span><span>CSS</span><span>Python</span><span>C++</span><span>XAML</span><span>Git</span>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="skills"><span>C#</span><span>JavaScript</span><span>Python</span><span>SQL</span><span>HTML5</span><span>CSS</span><span>XAML</span><span>C++</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks and tools</h3>
+        <div class="skills"><span>ASP.NET Core MVC</span><span>.NET MAUI</span><span>Entity Framework</span><span>Razor</span><span>Bootstrap</span><span>React</span><span>Vite</span><span>Electron</span><span>SQLite</span><span>Git</span><span>Visual Studio</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Concepts</h3>
+        <div class="skills"><span>Full-stack development</span><span>Database design</span><span>CRUD operations</span><span>RESTful APIs</span><span>OOP</span><span>MVVM</span><span>MVC</span><span>Design patterns</span><span>Version control</span></div>
       </div>
     </section>
 
@@ -63,15 +70,13 @@
       <div class="socials">
         <a href="mailto:john834esin@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a>
         <a href="https://github.com/John-v2" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
-        <!-- Replace YOUR-LINKEDIN with your LinkedIn profile slug -->
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
-        <!-- To add a resume button: upload resume.pdf to the repo, then uncomment the next line -->
-        <!-- <a href="resume.pdf" target="_blank" aria-label="Resume"><i class="ti ti-file-cv"></i></a> -->
+        <a href="https://www.linkedin.com/in/john-kennneth-b82524211" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+        <a href="resume.pdf" target="_blank" rel="noopener" aria-label="Resume"><i class="ti ti-file-cv"></i></a>
       </div>
     </section>
   </main>
 
   <footer>© <span id="yr"></span> John Esin-Kenneth · Built with GitHub Pages</footer>
-  <script src="main.js?v=202611212018"></script>
+  <script src="main.js?v=202611212042"></script>
 </body>
 </html>

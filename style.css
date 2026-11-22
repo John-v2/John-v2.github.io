@@ -198,3 +198,10 @@ nav ul a.active { color: var(--text); border-bottom: 1px solid var(--accent); pa
 
 .hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 13px; color: var(--muted); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; background: rgba(12, 16, 32, 0.6); }
 .hint i { color: var(--accent); font-size: 15px; }
+
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+.hero-btns .btn { margin-top: 0; display: inline-flex; align-items: center; gap: 6px; }
+.btn-ghost { border-color: var(--line); color: var(--muted); }
+.btn-ghost:hover { background: transparent; color: var(--text); border-color: var(--text); }
+.skill-group + .skill-group { margin-top: 22px; }
+.skill-group h3 { font-size: 12px; letter-spacing: 2px; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; }

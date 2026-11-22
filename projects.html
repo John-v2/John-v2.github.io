@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
-  <link rel="stylesheet" href="style.css?v=202611212021" />
+  <link rel="stylesheet" href="style.css?v=202611212042" />
 </head>
 <body>
   <canvas id="stars"></canvas>
@@ -38,6 +38,7 @@
         <h3>Chamber of Finance web app</h3>
         <p>A membership and CRM web app built in ASP.NET Core MVC with a team of developers for the Chamber of Finance.</p>
         <ul>
+          <li>Delivered the NCR (Non-Conformance Report) management prototype two weeks ahead of schedule</li>
           <li>Built new features including a JSON drafts system, role-based access control, search, and a rebuilt login and registration flow</li>
           <li>Wrote C#, Razor, and JavaScript across the controllers, views, and front end</li>
           <li>Coordinated the team through Git branching and code reviews; user testing cut submission errors by 35%</li>
@@ -53,13 +54,13 @@
         </div>
         <div data-project="music" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>Music manager</h3>
-          <p>An MVC app that links artists, albums, and songs. Server-side validation and confirmations cut accidental deletions by 90%.</p>
-          <div class="tags"><span>ASP.NET Core MVC</span><span>C#</span><span>Entity Framework</span><span>SQL</span></div>
+          <p>A full-stack MVC app linking artists, albums, and songs, with search, pagination, and filtering. Server-side validation cut accidental deletions by 90%.</p>
+          <div class="tags"><span>C#</span><span>ASP.NET MVC</span><span>Entity Framework</span><span>SQL</span></div>
         </div>
         <div data-project="employee" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>Employee management app</h3>
-          <p>A multiplatform app for Windows, Android, and iOS from one codebase, with search, paging, and filtering.</p>
-          <div class="tags"><span>.NET MAUI</span><span>MVVM</span><span>XAML</span><span>SQLite</span></div>
+          <p>A cross-platform .NET MAUI app for Windows, Android, and iOS from one codebase, with 100% data persistence accuracy.</p>
+          <div class="tags"><span>C#</span><span>.NET MAUI</span><span>MVVM</span><span>XAML</span><span>SQLite</span></div>
         </div>
         <div data-project="mimir" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>Mimir</h3>
@@ -81,10 +82,10 @@
   <template id="tpl-chamber">
     <span class="badge">TEAM PROJECT</span>
     <h3>Chamber of Finance web app</h3>
-    <p class="pm-lead">A membership and CRM web app built in ASP.NET Core MVC, where I developed new features across the controllers, Razor views, and front-end JavaScript.</p>
+    <p class="pm-lead">A membership, CRM, and NCR (Non-Conformance Report) management web app built in ASP.NET Core MVC, where I developed new features across the controllers, Razor views, and front-end JavaScript.</p>
     <h4>Features I built</h4>
     <ul>
-      <li><strong>Drafts system:</strong> JSON-based save, edit, and draft functionality so users never lose work in progress</li>
+      <li><strong>Drafts system:</strong> JSON-based save, edit, and draft features that persist form data in the browser, eliminating data loss</li>
       <li><strong>Role-based access:</strong> enforced member restrictions in the controllers and views, so members can't see other members or reach admin features</li>
       <li><strong>Login and registration:</strong> rebuilt the member vs staff login flow and wired the registration approval workflow into the UI</li>
       <li><strong>Search:</strong> added search to the pages that were missing it</li>
@@ -99,11 +100,14 @@
     </ul>
     <h4>Team leadership</h4>
     <ul>
-      <li>Coordinated the developers through Git branching, code reviews, and merge-conflict resolution</li>
+      <li>Coordinated the developers through Git branching, code reviews, and merge-conflict resolution, keeping commit practices consistent</li>
       <li>Presented the app to the client</li>
     </ul>
     <h4>Results</h4>
-    <ul><li>Iterative user testing cut submission errors by 35%</li></ul>
+    <ul>
+      <li>Delivered the responsive NCR management prototype two weeks ahead of schedule</li>
+      <li>Diagnosed root-cause form errors through iterative UX testing, cutting submission mistakes by 35%</li>
+    </ul>
     <div class="tags"><span>C#</span><span>ASP.NET Core MVC</span><span>Razor</span><span>JavaScript</span><span>Bootstrap</span><span>JSON</span><span>Git</span></div>
   </template>
 
@@ -127,39 +131,42 @@
 
   <template id="tpl-music">
     <h3>Music manager</h3>
-    <p class="pm-lead">An ASP.NET Core MVC app for managing a music library of artists, albums, and songs.</p>
-    <h4>Features</h4>
+    <p class="pm-lead">A full-stack ASP.NET MVC music management system for artists, albums, and songs.</p>
+    <h4>Features I built</h4>
     <ul>
-      <li>Full create, read, update, and delete for artists, albums, and songs</li>
-      <li>Linked tables, so every song belongs to an album and every album to an artist</li>
-      <li>Server-side validation and confirmation dialogs before anything is deleted</li>
+      <li><strong>Search, pagination, and filtering</strong> to cut the time it takes to find content</li>
+      <li><strong>Safe deletes:</strong> server-side validation and confirmation dialogs for destructive operations</li>
+      <li><strong>Error handling:</strong> structured handling so invalid data never reaches the database</li>
+      <li>Full create, read, update, and delete for every table</li>
     </ul>
     <h4>How it's built</h4>
     <ul>
-      <li>MVC pattern in C#, with Entity Framework mapping the models to the database</li>
-      <li>Normalized relational database with foreign keys and cascade delete rules</li>
-      <li>Input and exception handling so invalid data never reaches the database</li>
+      <li>MVC pattern in C# with database-first Entity Framework</li>
+      <li>Normalized relational schema with foreign keys and cascade delete constraints</li>
     </ul>
     <h4>Results</h4>
-    <ul><li>Cut accidentally deleted records by 90%</li></ul>
-    <div class="tags"><span>ASP.NET Core MVC</span><span>C#</span><span>Entity Framework</span><span>SQL</span></div>
+    <ul><li>Cut accidental data deletion by 90%</li></ul>
+    <div class="tags"><span>C#</span><span>ASP.NET MVC</span><span>Entity Framework</span><span>SQL</span><span>HTML</span><span>CSS</span></div>
   </template>
 
   <template id="tpl-employee">
     <h3>Employee management app</h3>
-    <p class="pm-lead">A multiplatform employee database app built for a local company in Niagara.</p>
-    <h4>Features</h4>
+    <p class="pm-lead">A cross-platform employee database app built for a local company in Niagara.</p>
+    <h4>Features I built</h4>
     <ul>
-      <li>Runs on Windows, Android, and iOS from one shared codebase</li>
-      <li>Search, paging, and filtering to find employee records fast</li>
-      <li>Responsive interface built in XAML</li>
+      <li><strong>Cross-platform:</strong> deploys to Windows, Android, and iOS from a single codebase</li>
+      <li><strong>Full CRUD</strong> on an indexed SQLite database</li>
+      <li><strong>Responsive XAML UI</strong> that adapts to different screen sizes and orientations</li>
+      <li><strong>Validation:</strong> input checks, exception handling, and real-time feedback so bad data never reaches the database</li>
     </ul>
     <h4>How it's built</h4>
     <ul>
-      <li>.NET MAUI using the MVVM pattern</li>
-      <li>Indexed SQLite database with full CRUD and 100% data persistence accuracy</li>
+      <li>.NET MAUI with MVVM architecture and data binding</li>
+      <li>Indexed SQLite schema</li>
     </ul>
-    <div class="tags"><span>.NET MAUI</span><span>MVVM</span><span>XAML</span><span>SQLite</span></div>
+    <h4>Results</h4>
+    <ul><li>100% data persistence accuracy across all supported platforms</li></ul>
+    <div class="tags"><span>C#</span><span>.NET MAUI</span><span>MVVM</span><span>XAML</span><span>SQLite</span></div>
   </template>
 
   <template id="tpl-mimir">
@@ -181,7 +188,7 @@
   </template>
 
   <footer>© <span id="yr"></span> John Esin-Kenneth · Built with GitHub Pages</footer>
-  <script src="main.js?v=202611212021"></script>
-  <script src="projects.js?v=202611212021"></script>
+  <script src="main.js?v=202611212042"></script>
+  <script src="projects.js?v=202611212042"></script>
 </body>
 </html>
