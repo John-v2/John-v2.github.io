@@ -9,7 +9,7 @@ Live: https://john-v2.github.io
 - `projects.html` — projects page
 - `style.css` — shared styles
 - `main.js` — nebula, starfield + scroll animations
-- `projects.js` — project detail popups (content lives in the `<template>` blocks in projects.html)
+- `projects.js` — project hover detail boxes (content lives in the `<template>` blocks in projects.html)
 
 ## Editing
 - **Photo:** add `photo.jpg`, then swap the `JE` in the avatar (index.html) for `<img src="photo.jpg" alt="John Esin-Kenneth" />`

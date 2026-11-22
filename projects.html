@@ -32,7 +32,7 @@
     </section>
 
     <section id="projects" class="reveal show" style="padding-top: 30px;">
-      <div data-project="chamber" role="button" tabindex="0" aria-haspopup="dialog" class="card clickable featured">
+      <div data-project="chamber" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable featured">
         <span class="badge">FEATURED · TEAM PROJECT</span>
         <h3>Chamber of Finance web app</h3>
         <p>A web app built with a team of developers for the Chamber of Finance.</p>
@@ -41,33 +41,33 @@
           <li>Built JSON-based save, edit, and draft functionality so no work is lost</li>
           <li>Ran iterative user testing that cut submission errors by 35%</li>
         </ul>
-        <span class="more">View details <i class="ti ti-arrow-right"></i></span>
+        <span class="more"><span class="on-hover">Hover for details</span><span class="on-touch">Tap for details</span> <i class="ti ti-info-circle"></i></span>
         <div class="tags"><span>Team project</span><span>Git</span><span>JSON</span><span>UX testing</span></div>
       </div>
 
       <div class="grid">
-        <div data-project="heimdall" role="button" tabindex="0" aria-haspopup="dialog" class="card clickable">
+        <div data-project="heimdall" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>HeimdallOS</h3>
           <p>A full-stack command-center desktop app.</p>
-          <span class="more">View details <i class="ti ti-arrow-right"></i></span>
+          <span class="more"><span class="on-hover">Hover for details</span><span class="on-touch">Tap for details</span> <i class="ti ti-info-circle"></i></span>
           <div class="tags"><span>React</span><span>Vite</span><span>Electron</span><span>ASP.NET Core</span><span>EF Core</span><span>SQLite</span></div>
         </div>
-        <div data-project="music" role="button" tabindex="0" aria-haspopup="dialog" class="card clickable">
+        <div data-project="music" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>Music manager</h3>
           <p>An MVC app that links artists, albums, and songs. Server-side validation and confirmations cut accidental deletions by 90%.</p>
-          <span class="more">View details <i class="ti ti-arrow-right"></i></span>
+          <span class="more"><span class="on-hover">Hover for details</span><span class="on-touch">Tap for details</span> <i class="ti ti-info-circle"></i></span>
           <div class="tags"><span>ASP.NET Core MVC</span><span>C#</span><span>Entity Framework</span><span>SQL</span></div>
         </div>
-        <div data-project="employee" role="button" tabindex="0" aria-haspopup="dialog" class="card clickable">
+        <div data-project="employee" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>Employee management app</h3>
           <p>A multiplatform app for Windows, Android, and iOS from one codebase, with search, paging, and filtering.</p>
-          <span class="more">View details <i class="ti ti-arrow-right"></i></span>
+          <span class="more"><span class="on-hover">Hover for details</span><span class="on-touch">Tap for details</span> <i class="ti ti-info-circle"></i></span>
           <div class="tags"><span>.NET MAUI</span><span>MVVM</span><span>XAML</span><span>SQLite</span></div>
         </div>
-        <div data-project="mimir" role="button" tabindex="0" aria-haspopup="dialog" class="card clickable">
+        <div data-project="mimir" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable">
           <h3>Mimir</h3>
           <p>A trading-assistant app with market tracking, trade journaling, and net-worth tracking.</p>
-          <span class="more">View details <i class="ti ti-arrow-right"></i></span>
+          <span class="more"><span class="on-hover">Hover for details</span><span class="on-touch">Tap for details</span> <i class="ti ti-info-circle"></i></span>
           <div class="tags"><span>React</span><span>Python</span><span>SQLite</span></div>
         </div>
       </div>
@@ -80,14 +80,11 @@
   </main>
 
 
-  <dialog id="project-modal" aria-labelledby="pm-title">
-    <button class="pm-close" aria-label="Close"><i class="ti ti-x"></i></button>
-    <div id="pm-body"></div>
-  </dialog>
+  <div id="hover-panel" class="hover-panel" role="tooltip" aria-hidden="true"><span class="hp-arrow"></span><div id="hp-body"></div></div>
 
   <template id="tpl-chamber">
     <span class="badge">TEAM PROJECT</span>
-    <h3 id="pm-title">Chamber of Finance web app</h3>
+    <h3>Chamber of Finance web app</h3>
     <p class="pm-lead">A web app my development team built for the Chamber of Finance.</p>
     <h4>My role</h4>
     <ul>
@@ -103,7 +100,7 @@
   </template>
 
   <template id="tpl-heimdall">
-    <h3 id="pm-title">HeimdallOS</h3>
+    <h3>HeimdallOS</h3>
     <p class="pm-lead">A full-stack command-center desktop app that brings my everyday tools into one place.</p>
     <h4>Features</h4>
     <ul>
@@ -121,7 +118,7 @@
   </template>
 
   <template id="tpl-music">
-    <h3 id="pm-title">Music manager</h3>
+    <h3>Music manager</h3>
     <p class="pm-lead">An ASP.NET Core MVC app for managing a music library of artists, albums, and songs.</p>
     <h4>Features</h4>
     <ul>
@@ -141,7 +138,7 @@
   </template>
 
   <template id="tpl-employee">
-    <h3 id="pm-title">Employee management app</h3>
+    <h3>Employee management app</h3>
     <p class="pm-lead">A multiplatform employee database app built for a local company in Niagara.</p>
     <h4>Features</h4>
     <ul>
@@ -158,7 +155,7 @@
   </template>
 
   <template id="tpl-mimir">
-    <h3 id="pm-title">Mimir</h3>
+    <h3>Mimir</h3>
     <p class="pm-lead">A trading-assistant app that tracks markets, plans trades, and keeps a full picture of my finances.</p>
     <h4>Features</h4>
     <ul>
