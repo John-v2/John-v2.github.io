@@ -1,5 +1,5 @@
 :root {
-  --bg: #05070f;
+  --bg: #03040a;
   --text: #ffffff;
   --muted: #a9b6d6;
   --dim: #6f7ea3;
@@ -16,13 +16,19 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-#stars { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-.nebula {
+.space-photo {
+  position: fixed; left: 0; right: 0; top: 0; height: 125vh; z-index: 0; pointer-events: none;
+  background: #03040a url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Pillars_of_Creation_%28NIRCam_Image%29.jpg/1280px-Pillars_of_Creation_%28NIRCam_Image%29.jpg") center 30% / cover no-repeat;
+  will-change: transform;
+}
+.space-shade {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 60% 40% at 80% 10%, rgba(90, 80, 220, 0.18), transparent 70%),
-    radial-gradient(ellipse 50% 40% at 10% 90%, rgba(40, 140, 220, 0.12), transparent 70%);
+    radial-gradient(ellipse 90% 70% at 50% 40%, rgba(3, 4, 10, 0.35), rgba(3, 4, 10, 0.75) 100%),
+    linear-gradient(rgba(3, 4, 10, 0.25), rgba(3, 4, 10, 0.55));
 }
+#stars { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.credit { display: block; margin-top: 6px; font-size: 11px; color: var(--dim); }
 main, nav, footer { position: relative; z-index: 1; }
 h1, h2, h3, .logo { font-family: 'Orbitron', sans-serif; font-weight: 500; letter-spacing: 1px; }
 a { color: inherit; text-decoration: none; }
@@ -31,7 +37,7 @@ nav {
   position: sticky; top: 0; z-index: 10;
   display: flex; justify-content: space-between; align-items: center;
   padding: 18px 6vw;
-  background: rgba(5, 7, 15, 0.7);
+  background: rgba(3, 4, 10, 0.72);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
