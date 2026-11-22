@@ -148,9 +148,6 @@ nav ul a.active { color: var(--text); border-bottom: 1px solid var(--accent); pa
 
 .card.clickable { cursor: pointer; }
 .card.clickable:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.more { display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 13px; color: var(--text); opacity: 0.85; }
-.more i { transition: transform 0.2s; }
-@media (hover: hover) { .card.clickable:hover .more i { transform: translateX(4px); } }
 
 
 .on-touch { display: none; }
@@ -196,3 +193,6 @@ nav ul a.active { color: var(--text); border-bottom: 1px solid var(--accent); pa
 .hover-panel .tags { margin-top: 14px; }
 .hover-panel .tags span { font-size: 11px; }
 @media (prefers-reduced-motion: reduce) { .hover-panel { transition: none; } }
+
+.hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 13px; color: var(--muted); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; background: rgba(12, 16, 32, 0.6); }
+.hint i { color: var(--accent); font-size: 15px; }
