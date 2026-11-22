@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
-  <link rel="stylesheet" href="style.css?v=202611212018" />
+  <link rel="stylesheet" href="style.css?v=202611212021" />
 </head>
 <body>
   <canvas id="stars"></canvas>
@@ -36,13 +36,13 @@
       <div data-project="chamber" role="button" tabindex="0" aria-describedby="hover-panel" class="card clickable featured">
         <span class="badge">FEATURED · TEAM PROJECT</span>
         <h3>Chamber of Finance web app</h3>
-        <p>A membership and CRM web app built with a team of developers for the Chamber of Finance, with separate member and staff experiences.</p>
+        <p>A membership and CRM web app built in ASP.NET Core MVC with a team of developers for the Chamber of Finance.</p>
         <ul>
-          <li>Coordinated the team through Git branches, code reviews, and merge-conflict resolution</li>
-          <li>Built JSON-based save, edit, and draft functionality so no work is lost</li>
-          <li>Ran iterative user testing that cut submission errors by 35%</li>
+          <li>Built new features including a JSON drafts system, role-based access control, search, and a rebuilt login and registration flow</li>
+          <li>Wrote C#, Razor, and JavaScript across the controllers, views, and front end</li>
+          <li>Coordinated the team through Git branching and code reviews; user testing cut submission errors by 35%</li>
         </ul>
-        <div class="tags"><span>ASP.NET Core MVC</span><span>C#</span><span>Git</span><span>Team project</span></div>
+        <div class="tags"><span>C#</span><span>ASP.NET Core MVC</span><span>Razor</span><span>JavaScript</span><span>Git</span></div>
       </div>
 
       <div class="grid">
@@ -81,27 +81,30 @@
   <template id="tpl-chamber">
     <span class="badge">TEAM PROJECT</span>
     <h3>Chamber of Finance web app</h3>
-    <p class="pm-lead">A membership and CRM web app my development team built for the Chamber, with separate experiences for members and staff.</p>
-    <h4>What the app does</h4>
+    <p class="pm-lead">A membership and CRM web app built in ASP.NET Core MVC, where I developed new features across the controllers, Razor views, and front-end JavaScript.</p>
+    <h4>Features I built</h4>
     <ul>
-      <li>Member registration with an approval workflow before accounts go live</li>
-      <li>Separate member and staff logins, with staff roles for Admin, Manager, Staff, Sales, and Finance</li>
-      <li>Role-based access, so members can't see other members or reach admin features</li>
-      <li>Member portal with a member discounts section showing active and inactive offers</li>
-      <li>Staff tools for managing members, roles, and reports, with search across pages</li>
-      <li>Mobile-friendly flow plus a built-in tutorial and help section</li>
+      <li><strong>Drafts system:</strong> JSON-based save, edit, and draft functionality so users never lose work in progress</li>
+      <li><strong>Role-based access:</strong> enforced member restrictions in the controllers and views, so members can't see other members or reach admin features</li>
+      <li><strong>Login and registration:</strong> rebuilt the member vs staff login flow and wired the registration approval workflow into the UI</li>
+      <li><strong>Search:</strong> added search to the pages that were missing it</li>
+      <li><strong>Quick-fill demo logins:</strong> JavaScript buttons that fill in demo accounts for each staff role</li>
+      <li><strong>Member discounts:</strong> clear active vs inactive states in the member portal</li>
+      <li><strong>Navigation and help:</strong> removed dead ends between pages, smoothed mobile transitions, and built a tutorial and help section</li>
     </ul>
-    <h4>My role</h4>
+    <h4>How it's built</h4>
     <ul>
-      <li>Coordinated the developers on the team through Git branching</li>
-      <li>Ran code reviews and resolved merge conflicts so work merged cleanly</li>
-      <li>Built JSON-based save, edit, and draft functionality so users never lose work in progress</li>
-      <li>Improved the login, registration, and navigation flow so there are no dead ends</li>
-      <li>Added quick-fill demo accounts and helped present the app to the client</li>
+      <li>ASP.NET Core MVC in C#, with Razor views and Bootstrap</li>
+      <li>Separate member and staff accounts, with Admin, Manager, Staff, Sales, and Finance roles</li>
+    </ul>
+    <h4>Team leadership</h4>
+    <ul>
+      <li>Coordinated the developers through Git branching, code reviews, and merge-conflict resolution</li>
+      <li>Presented the app to the client</li>
     </ul>
     <h4>Results</h4>
     <ul><li>Iterative user testing cut submission errors by 35%</li></ul>
-    <div class="tags"><span>ASP.NET Core MVC</span><span>C#</span><span>Razor</span><span>Bootstrap</span><span>Git</span><span>Team project</span></div>
+    <div class="tags"><span>C#</span><span>ASP.NET Core MVC</span><span>Razor</span><span>JavaScript</span><span>Bootstrap</span><span>JSON</span><span>Git</span></div>
   </template>
 
   <template id="tpl-heimdall">
@@ -178,7 +181,7 @@
   </template>
 
   <footer>© <span id="yr"></span> John Esin-Kenneth · Built with GitHub Pages</footer>
-  <script src="main.js?v=202611212018"></script>
-  <script src="projects.js?v=202611212018"></script>
+  <script src="main.js?v=202611212021"></script>
+  <script src="projects.js?v=202611212021"></script>
 </body>
 </html>
