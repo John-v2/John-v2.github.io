@@ -13,5 +13,5 @@ Live: https://john-v2.github.io
 
 ## Editing
 - **Photo:** add `photo.jpg`, then swap the `JE` in the avatar (index.html) for `<img src="photo.jpg" alt="John Esin-Kenneth" />`
-- **Resume:** replace `resume.pdf` (web copy, no phone number)
+- **Resume:** replace `resume.pdf` (your uploaded resume PDF)
 - **New project:** copy a `<div class="card">` block in projects.html
