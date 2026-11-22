@@ -30,10 +30,12 @@ function place(card) {
     x = side === 'right' ? r.right + GAP : r.left - GAP - pw;
     y = Math.min(Math.max(r.top, EDGE + 64), vh - ph - EDGE);
     const ay = Math.min(Math.max(r.top + 28 - y, 16), ph - 28);
-    arrow.style.top = ay + 'px'; arrow.style.left = '';
+    arrow.style.top = ay + 'px'; arrow.style.left = ''; arrow.style.display = '';
   } else {
     x = Math.min(Math.max(r.left + r.width / 2 - pw / 2, EDGE), vw - pw - EDGE);
-    y = side === 'below' ? r.bottom + GAP : r.top - GAP - ph;
+    const ideal = side === 'below' ? r.bottom + GAP : r.top - GAP - ph;
+    y = Math.min(Math.max(ideal, EDGE + 64), Math.max(EDGE + 64, vh - ph - EDGE));
+    arrow.style.display = Math.abs(y - ideal) > 2 ? 'none' : '';
     const ax = Math.min(Math.max(r.left + r.width / 2 - x - 6, 16), pw - 28);
     arrow.style.left = ax + 'px'; arrow.style.top = '';
   }
@@ -47,6 +49,7 @@ function show(card) {
   if (!fill(card)) return;
   active = card;
   panel.classList.remove('touch');
+  panel.classList.toggle('wide', card.classList.contains('featured'));
   panel.setAttribute('aria-hidden', 'false');
   place(card);
   panel.classList.add('show');

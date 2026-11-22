@@ -167,6 +167,8 @@ nav ul a.active { color: var(--text); border-bottom: 1px solid var(--accent); pa
   transition: opacity 0.16s ease, transform 0.16s ease;
 }
 .hover-panel.show { opacity: 1; transform: none; }
+.hover-panel.wide { width: 600px; }
+.hover-panel.touch { max-height: 75vh; overflow-y: auto; }
 .hover-panel.touch { pointer-events: auto; }
 .hover-panel::before, .hover-panel::after {
   content: ''; position: absolute; width: 14px; height: 14px; border-color: var(--accent); border-style: solid;
