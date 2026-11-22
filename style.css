@@ -14,18 +14,20 @@ body {
   color: var(--text);
   font-family: 'Space Grotesk', system-ui, sans-serif;
   line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
 }
 .space-photo {
   position: fixed; left: 0; right: 0; top: 0; height: 125vh; z-index: 0; pointer-events: none;
   background: #03040a url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Pillars_of_Creation_%28NIRCam_Image%29.jpg/1280px-Pillars_of_Creation_%28NIRCam_Image%29.jpg") center 30% / cover no-repeat;
+  filter: brightness(0.6) saturate(0.8) blur(1.5px);
   will-change: transform;
 }
 .space-shade {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 90% 70% at 50% 40%, rgba(3, 4, 10, 0.35), rgba(3, 4, 10, 0.75) 100%),
-    linear-gradient(rgba(3, 4, 10, 0.25), rgba(3, 4, 10, 0.55));
+    radial-gradient(ellipse 80% 60% at 50% 45%, rgba(3, 4, 10, 0.55), rgba(3, 4, 10, 0.85) 100%),
+    linear-gradient(rgba(3, 4, 10, 0.35), rgba(3, 4, 10, 0.6));
 }
 #stars { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 .credit { display: block; margin-top: 6px; font-size: 11px; color: var(--dim); }
