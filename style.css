@@ -151,7 +151,7 @@ nav ul a.active { color: var(--text); border-bottom: 1px solid var(--accent); pa
 
 
 .on-touch { display: none; }
-@media (hover: none) { .on-hover { display: none; } .on-touch { display: inline; } }
+@media (any-hover: none) { .on-hover { display: none; } .on-touch { display: inline; } }
 
 .hover-panel {
   position: fixed; z-index: 50; top: 0; left: 0;

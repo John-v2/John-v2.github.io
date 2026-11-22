@@ -1,7 +1,6 @@
 const panel = document.getElementById('hover-panel');
 const body = document.getElementById('hp-body');
 const arrow = panel.querySelector('.hp-arrow');
-const canHover = matchMedia('(hover: hover)').matches;
 const GAP = 14, EDGE = 12;
 let active = null;
 
@@ -47,7 +46,7 @@ function place(card) {
 function show(card) {
   if (!fill(card)) return;
   active = card;
-  panel.classList.toggle('touch', !canHover);
+  panel.classList.remove('touch');
   panel.setAttribute('aria-hidden', 'false');
   place(card);
   panel.classList.add('show');
@@ -60,20 +59,19 @@ function hide() {
 }
 
 document.querySelectorAll('.card.clickable').forEach(card => {
-  if (canHover) {
-    card.addEventListener('mouseenter', () => show(card));
-    card.addEventListener('mouseleave', hide);
-  } else {
-    card.addEventListener('click', e => {
-      e.stopPropagation();
-      active === card ? hide() : show(card);
-    });
-  }
-  card.addEventListener('focus', () => show(card));
+  card.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') show(card); });
+  card.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') hide(); });
+  card.addEventListener('click', e => {
+    if (e.pointerType === 'mouse') return;
+    e.stopPropagation();
+    if (active === card) hide();
+    else { show(card); panel.classList.add('touch'); }
+  });
+  card.addEventListener('focus', () => { if (!card.matches(':hover')) show(card); });
   card.addEventListener('blur', hide);
 });
 
-document.addEventListener('click', e => { if (!canHover && active && !panel.contains(e.target)) hide(); });
+document.addEventListener('click', e => { if (active && !panel.contains(e.target) && !active.contains(e.target)) hide(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
-addEventListener('scroll', () => { if (active) canHover ? place(active) : hide(); }, { passive: true });
+addEventListener('scroll', () => { if (!active) return; panel.classList.contains('touch') ? hide() : place(active); }, { passive: true });
 addEventListener('resize', () => { if (active) place(active); });
